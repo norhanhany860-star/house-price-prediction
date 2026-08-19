@@ -227,7 +227,7 @@ The tests verify the main API functionality.
 
 ---
 
-## ▶ End-to-End Demo
+##  End-to-End Demo
 
 The application works through the following flow:
 
