@@ -131,7 +131,7 @@ http://localhost:8000/docs
 
 ---
 
- 💻 Frontend Setup
+  Frontend Setup
 
 Open another terminal:
 
@@ -203,7 +203,7 @@ GET /health
 
 ---
 
-## 🧪 Testing
+##  Testing
 
 Run the backend tests with:
 
