@@ -1,0 +1,350 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f5e6d3, #ead1dc);
+  color: #333;
+}
+
+
+/* =========================
+   Home Page
+========================= */
+
+.home-container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px 20px;
+}
+
+.prediction-card {
+  width: 100%;
+  max-width: 650px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.prediction-card h1 {
+  text-align: center;
+
+  color: #7b3f61;
+
+  margin-bottom: 10px;
+
+  font-size: 30px;
+}
+
+.prediction-card h2 {
+  text-align: center;
+
+  color: #555;
+
+  margin-bottom: 30px;
+
+  font-size: 18px;
+
+  font-weight: normal;
+}
+
+
+/* =========================
+   Prediction Form
+========================= */
+
+.prediction-form {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 18px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.prediction-form label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-weight: bold;
+
+  color: #555;
+}
+
+.prediction-form input,
+.prediction-form select {
+  width: 100%;
+
+  padding: 12px 14px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  font-size: 15px;
+
+  background: #fafafa;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+.prediction-form input:focus,
+.prediction-form select:focus {
+  border-color: #a85d83;
+
+  box-shadow: 0 0 0 3px rgba(168, 93, 131, 0.12);
+
+  background: white;
+}
+
+
+/* =========================
+   Predict Button
+========================= */
+
+.predict-button {
+  grid-column: 1 / -1;
+
+  margin-top: 10px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #7b3f61;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.predict-button:hover {
+  background: #622f4c;
+
+  transform: translateY(-1px);
+}
+
+.predict-button:disabled {
+  background: #aaa;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================
+   Error Message
+========================= */
+
+.error-message {
+  grid-column: 1 / -1;
+
+  background: #ffe5e5;
+
+  color: #b42318;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* =========================
+   Result Page
+========================= */
+
+.result-container {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 20px;
+
+  background: linear-gradient(
+    135deg,
+    #f5e6d3,
+    #ead1dc
+  );
+}
+
+.result-card {
+  width: 90%;
+
+  max-width: 550px;
+
+  background: white;
+
+  text-align: center;
+
+  padding: 45px 35px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+
+  animation: resultAppear 0.4s ease;
+}
+
+.result-card h1 {
+  color: #7b3f61;
+
+  margin-bottom: 15px;
+
+  font-size: 30px;
+}
+
+.result-card h2 {
+  color: #555;
+
+  font-size: 20px;
+
+  margin-bottom: 25px;
+}
+
+.price {
+  font-size: 42px;
+
+  font-weight: bold;
+
+  color: #7b3f61;
+
+  margin: 25px 0;
+}
+
+
+/* =========================
+   Result Button
+========================= */
+
+.back-button {
+  display: inline-block;
+
+  padding: 13px 25px;
+
+  border-radius: 10px;
+
+  background: #7b3f61;
+
+  color: white;
+
+  border: none;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  background: #622f4c;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   Result Animation
+========================= */
+
+@keyframes resultAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 600px) {
+
+  .prediction-form {
+    grid-template-columns: 1fr;
+  }
+
+  .full-width,
+  .predict-button,
+  .error-message {
+    grid-column: 1;
+  }
+
+  .prediction-card {
+    padding: 25px 20px;
+  }
+
+  .prediction-card h1 {
+    font-size: 25px;
+  }
+
+  .result-card {
+    width: 95%;
+
+    padding: 35px 20px;
+  }
+
+  .result-card h1 {
+    font-size: 26px;
+  }
+
+  .price {
+    font-size: 34px;
+  }
+}

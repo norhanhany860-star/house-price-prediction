@@ -1,0 +1,36 @@
+# Python
+
+.venv/
+venv/
+**pycache**/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Environment variables
+
+.env
+
+# Logs
+
+*.log
+
+# Raw dataset
+
+house_prices.csv
+
+# Frontend
+
+node_modules/
+frontend/dist/
+
+# Python cache
+
+*.egg-info/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+# Trained model
+backend/models/house_price.pkl
