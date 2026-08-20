@@ -252,7 +252,6 @@ The application works through the following flow:
 **User Input → React → FastAPI → Random Forest Model → Predicted Price**
 
 Run both servers, open the frontend, enter the property details, and click **Predict Price**.
-ظ
 ---
 
 ##  Notes
