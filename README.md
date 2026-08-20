@@ -77,29 +77,34 @@ https://www.kaggle.com/datasets/juhibhojani/house-price
 
 ```text
 house_prices.csv
+```
 
-The raw CSV is excluded from GitHub using .gitignore.
+The raw CSV is excluded from GitHub using `.gitignore`.
 
-Trained Model
+### Trained Model
 
 The trained Random Forest model is provided separately because the file size is larger than GitHub's recommended file size limit.
 
-Download the trained model:
-
+**Download the trained model:**
 https://drive.google.com/file/d/1wCqHGKXj6QaA4c4GZmM610FgtLplS8W4/view?usp=sharing
 
 After downloading, place the file here:
 
+```text
 backend/models/house_price.pkl
+```
 
-##  Model Performance
-![Three regression models were compared:](screenshots/models.png)
+---
+
+## Model Performance
+
+![Three regression models were compared](screenshots/models.png)
 
 **Random Forest** was selected as the final model because it achieved the best overall performance.
 
 ---
 
-##  Backend Setup
+## Backend Setup
 
 Open a terminal in the project root:
 
@@ -120,6 +125,8 @@ Install the required packages:
 
 ```powershell
 pip install -r requirements.txt
+```
+
 ```
 
 Run the FastAPI server:
