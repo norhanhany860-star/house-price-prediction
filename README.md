@@ -59,11 +59,13 @@ House-Price-Prediction/
 
 ---
 
-##  Dataset
+---
+
+## Dataset
 
 The project uses the **House Price** dataset from Kaggle.
 
-**Dataset:**
+**Dataset:**  
 https://www.kaggle.com/datasets/juhibhojani/house-price
 
 ### Download Instructions
@@ -75,11 +77,20 @@ https://www.kaggle.com/datasets/juhibhojani/house-price
 
 ```text
 house_prices.csv
-```
 
-The raw CSV is excluded from GitHub using `.gitignore`.
+The raw CSV is excluded from GitHub using .gitignore.
 
----
+Trained Model
+
+The trained Random Forest model is provided separately because the file size is larger than GitHub's recommended file size limit.
+
+Download the trained model:
+
+https://drive.google.com/file/d/1wCqHGKXj6QaA4c4GZmM610FgtLplS8W4/view?usp=sharing
+
+After downloading, place the file here:
+
+backend/models/house_price.pkl
 
 ##  Model Performance
 ![Three regression models were compared:](screenshots/models.png)
@@ -173,7 +184,7 @@ http://localhost:5173
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 ### `POST /predict`
 
@@ -234,7 +245,7 @@ The application works through the following flow:
 **User Input → React → FastAPI → Random Forest Model → Predicted Price**
 
 Run both servers, open the frontend, enter the property details, and click **Predict Price**.
-
+ظ
 ---
 
 ##  Notes
